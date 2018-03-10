@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 public class ProfileAdapter extends RecyclerView.Adapter<ProfileHolder> {
 
     private int[] images = {R.drawable.elliott, R.drawable.max };
+    private String[] names = {"Elliott", "Max"};
     @Override
     public ProfileHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.profile_carousel_item, parent, false);
@@ -21,7 +22,7 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileHolder> {
     @Override
     public void onBindViewHolder(ProfileHolder holder, int position) {
             holder.imageView.setImageResource(images[position]);
-            holder.textView.setText("Profile");
+            holder.textView.setText(names[position]);
 
     }
 
