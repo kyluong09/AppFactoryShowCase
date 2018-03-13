@@ -13,7 +13,7 @@ import appfactory.edu.appfactoryshowcase.IdleClass;
 import appfactory.edu.appfactoryshowcase.R;
 
 public class MainActivity extends AppCompatActivity {
-    private int idleTime = 5000;
+    private int idleTime = 60000;
     private Handler handler;
     private Runnable runnable;
     private IdleClass idle;
