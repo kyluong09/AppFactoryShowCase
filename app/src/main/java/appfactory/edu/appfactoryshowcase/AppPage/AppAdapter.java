@@ -13,8 +13,14 @@ import appfactory.edu.appfactoryshowcase.R;
 
 public class AppAdapter extends RecyclerView.Adapter<AppHolder> {
 
-    private int[] images = {R.drawable.elliott, R.drawable.max, R.drawable.bg_sunny };
-    private String[] names = {"Elliott", "Max","sunny"};
+    private int[] images;
+    private String[] text;
+
+    AppAdapter(int[] images, String[] text) {
+        this.images = images;
+        this.text = text;
+    }
+
     @Override
     public AppHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.profile_carousel_item, parent, false);
@@ -24,7 +30,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppHolder> {
     @Override
     public void onBindViewHolder(AppHolder holder, int position) {
             holder.imageView.setImageResource(images[position]);
-            holder.textView.setText(names[position]);
+            holder.textView.setText(text[position]);
 
     }
 

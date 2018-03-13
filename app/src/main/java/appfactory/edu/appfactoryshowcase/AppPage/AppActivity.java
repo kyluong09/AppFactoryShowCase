@@ -21,7 +21,7 @@ import appfactory.edu.appfactoryshowcase.R;
 
 public class  AppActivity extends AppCompatActivity {
      // Idle time
-     private int idleTime = 60;
+     private int idleTime = 60000;
      private IdleClass idle;
      //Handle and Runnable
      private Handler handler;
@@ -44,10 +44,20 @@ public class  AppActivity extends AppCompatActivity {
         // vertical and cycle layout
         final CarouselLayoutManager layoutManager = new CarouselLayoutManager(CarouselLayoutManager.HORIZONTAL, true);
         layoutManager.setPostLayoutListener(new CarouselZoomPostLayoutListener());
-        
+
+        int[] images = { R.drawable.elliott_min, R.drawable.collin_min,
+                R.drawable.derrick_min, R.drawable.mia_min,
+                R.drawable.joe_min, R.drawable.jordan_min,
+                R.drawable.michael_min, R.drawable.mingxi_min,
+                R.drawable.sterling_min, R.drawable.tony_min,
+                R.drawable.ying_min, R.drawable.z_min};
+        String[] text = {"Elliott", "Collin", "Derrick",
+                        "Mia", "Joe","Jordan","Michael",
+                        "Mingxi", "Sterling", "Tony",
+                        "Sterling", "Tony", "Ying", "Z"};
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setAdapter(new AppAdapter());
+        mRecyclerView.setAdapter(new AppAdapter(images, text));
         mRecyclerView.addOnScrollListener(new CenterScrollListener());
 
 

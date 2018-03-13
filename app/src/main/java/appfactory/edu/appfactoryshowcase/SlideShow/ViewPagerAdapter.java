@@ -19,7 +19,7 @@ import appfactory.edu.appfactoryshowcase.R;
 public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
-    private int[] images = {R.drawable.bg_sunny,R.drawable.bg_sunny2,R.drawable.elliott,R.drawable.max};
+    private int[] images = {R.drawable.slideshow_initial,R.drawable.elliott,R.drawable.max};
 
     public ViewPagerAdapter(Context context) {
         this.context = context;

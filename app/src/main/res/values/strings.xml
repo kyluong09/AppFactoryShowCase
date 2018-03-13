@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppFactoryShowcase</string>
+    <string name="profile_image">profile_image</string>
 </resources>
