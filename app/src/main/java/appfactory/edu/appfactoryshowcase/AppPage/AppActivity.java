@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import com.azoft.carousellayoutmanager.CarouselLayoutManager;
 import com.azoft.carousellayoutmanager.CarouselZoomPostLayoutListener;
@@ -20,7 +21,7 @@ import appfactory.edu.appfactoryshowcase.R;
 
 public class  AppActivity extends AppCompatActivity {
      // Idle time
-     private int idleTime = 5000;
+     private int idleTime = 60;
      private IdleClass idle;
      //Handle and Runnable
      private Handler handler;
@@ -66,9 +67,10 @@ public class  AppActivity extends AppCompatActivity {
 
     @Override
     public void onUserInteraction() {
-        // When user touch the screen -> reset idle time
-        idle.resetIdleTimes(idleTime);
         super.onUserInteraction();
+        // When user touch the screen -> reset idle time
+        Log.d("TAG","Touched");
+        idle.resetIdleTimes(5000);
     }
 
    @Override

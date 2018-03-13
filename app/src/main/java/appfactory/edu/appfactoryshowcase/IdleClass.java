@@ -29,7 +29,7 @@ public class IdleClass {
 
     public void setIdle(int idleTime){
         handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        runnable = new Runnable() {
             @Override
             public void run() {
                 activity.runOnUiThread(new Runnable() {
@@ -41,7 +41,9 @@ public class IdleClass {
                     }
                 });
             }
-        }, idleTime);
+        };
+
+        handler.postDelayed(runnable,idleTime);
 
     }
 
@@ -54,7 +56,7 @@ public class IdleClass {
     }
 
     public void removeRunnable(){
-        handler.removeCallbacksAndMessages(null);
+        handler.removeCallbacks(runnable);
     }
 
 
