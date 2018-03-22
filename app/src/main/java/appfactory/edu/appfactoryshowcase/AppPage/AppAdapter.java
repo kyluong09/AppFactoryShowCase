@@ -16,7 +16,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppHolder> {
     private int[] images;
     private String[] text;
 
-    AppAdapter(int[] images, String[] text) {
+    public AppAdapter(int[] images, String[] text) {
         this.images = images;
         this.text = text;
     }

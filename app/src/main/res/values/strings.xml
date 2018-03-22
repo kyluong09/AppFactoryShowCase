@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">AppFactoryShowcase</string>
     <string name="profile_image">profile_image</string>
+    <string name="website_url">www.appfactoryuwp.com</string>
+    <string name="alumni">Alumni</string>
+    <string name="our_app">Our Apps</string>
 </resources>

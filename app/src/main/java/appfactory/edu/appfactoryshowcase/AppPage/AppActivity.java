@@ -46,15 +46,8 @@ public class  AppActivity extends AppCompatActivity {
         layoutManager.setPostLayoutListener(new CarouselZoomPostLayoutListener());
 
         int[] images = { R.drawable.elliott_min, R.drawable.collin_min,
-                R.drawable.derrick_min, R.drawable.mia_min,
-                R.drawable.joe_min, R.drawable.jordan_min,
-                R.drawable.michael_min, R.drawable.mingxi_min,
-                R.drawable.sterling_min, R.drawable.tony_min,
-                R.drawable.ying_min, R.drawable.z_min};
-        String[] text = {"Elliott", "Collin", "Derrick",
-                        "Mia", "Joe","Jordan","Michael",
-                        "Mingxi", "Sterling", "Tony",
-                        "Sterling", "Tony", "Ying", "Z"};
+                R.drawable.derrick_min};
+        String[] text = {"Jeramiah Van Offren", "Kyle Zawacki", "Max Rogers"};
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setAdapter(new AppAdapter(images, text));
