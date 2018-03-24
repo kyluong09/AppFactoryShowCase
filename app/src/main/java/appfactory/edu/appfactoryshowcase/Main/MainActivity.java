@@ -13,6 +13,7 @@ import com.azoft.carousellayoutmanager.CarouselLayoutManager;
 import com.azoft.carousellayoutmanager.CarouselZoomPostLayoutListener;
 import com.azoft.carousellayoutmanager.CenterScrollListener;
 
+import appfactory.edu.appfactoryshowcase.AlumPage.AlumActivity;
 import appfactory.edu.appfactoryshowcase.AppPage.AppActivity;
 import appfactory.edu.appfactoryshowcase.AppPage.AppAdapter;
 import appfactory.edu.appfactoryshowcase.IdleClass;
@@ -67,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
         alumniButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AppActivity.class));
+                startActivity(new Intent(MainActivity.this, AlumActivity.class));
             }
         });
 
         appButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,AppActivity.class));
+                startActivity(new Intent(MainActivity.this, AppActivity.class));
             }
         });
 
