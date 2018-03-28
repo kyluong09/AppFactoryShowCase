@@ -13,12 +13,10 @@ import appfactory.edu.appfactoryshowcase.R;
 public class AlumAdapter extends RecyclerView.Adapter<AlumHolder> {
 
     private int[] profile;
-    private int[] workplace;
     private String[] text;
 
-    public AlumAdapter(int[] profile, int[] workplace, String[] text) {
+    public AlumAdapter(int[] profile, String[] text) {
         this.profile = profile;
-        this.workplace = workplace;
         this.text = text;
     }
     @Override
@@ -32,7 +30,6 @@ public class AlumAdapter extends RecyclerView.Adapter<AlumHolder> {
     public void onBindViewHolder(AlumHolder holder, int position) {
         holder.imageView.setImageResource(profile[position]);
         holder.textView.setText(text[position]);
-        holder.workplace_imageView.setImageResource(workplace[position]);
     }
 
     @Override

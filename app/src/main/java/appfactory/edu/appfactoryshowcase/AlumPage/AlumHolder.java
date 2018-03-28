@@ -15,13 +15,11 @@ public class AlumHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;
     TextView textView;
-    ImageView workplace_imageView;
 
     public AlumHolder(View view) {
         super(view);
         imageView = view.findViewById(R.id.alum_imageView);
         textView = view.findViewById(R.id.alum_textView);
-        workplace_imageView = view.findViewById(R.id.workplace_image_view);
 
     }
 }

@@ -34,14 +34,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/alum_imageView" />
-
-    <ImageView
-        android:id="@+id/workplace_image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alum_textView" />
-
 </android.support.constraint.ConstraintLayout>
