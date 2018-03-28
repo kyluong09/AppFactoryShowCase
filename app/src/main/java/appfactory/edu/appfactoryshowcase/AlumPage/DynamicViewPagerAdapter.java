@@ -1,28 +1,27 @@
-package appfactory.edu.appfactoryshowcase.SlideShow;
+package appfactory.edu.appfactoryshowcase.AlumPage;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import appfactory.edu.appfactoryshowcase.Main.MainActivity;
 import appfactory.edu.appfactoryshowcase.R;
 
 /**
- * Created by kyluong09 on 3/10/18.
+ * Created by elliottcrifasi on 3/28/18.
  */
 
-public class ViewPagerAdapter extends PagerAdapter {
+public class DynamicViewPagerAdapter extends PagerAdapter {
+
     private Context context;
     private LayoutInflater layoutInflater;
-    private int[] images = {R.drawable.slideshow_initial,R.drawable.background};
+    private int[] images;
 
-    public ViewPagerAdapter(Context context) {
+    public DynamicViewPagerAdapter(Context context, int[] images) {
         this.context = context;
+        this.images = images;
     }
 
     @Override
@@ -41,15 +40,6 @@ public class ViewPagerAdapter extends PagerAdapter {
         View view = layoutInflater.inflate(R.layout.custom_view_layout,null);
         ImageView imageView = view.findViewById(R.id.image);
         imageView.setImageResource(images[position]);
-
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                context.startActivity(new Intent(context,MainActivity.class));
-            }
-        });
-
-
         ViewPager vp = (ViewPager) container;
         vp.addView(view,0);
         return view;
